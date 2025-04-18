@@ -129,6 +129,7 @@
 		"firelock_board",
 		"trapdoor_electronics",
 		"blast",
+		"ignition",
 		"big_manipulator",
 		"tile_sprayer",
 		"airlock_painter",
@@ -137,8 +138,8 @@
 		"cable_coil",
 		"welding_helmet",
 		"welding_tool",
+		"mini_welding_tool",
 		"tscanner",
-		"analyzer",
 		"multitool",
 		"wrench",
 		"crowbar",
@@ -178,7 +179,11 @@
 		"inducerengi",
 		"welding_goggles",
 		"tray_goggles",
+<<<<<<< HEAD
 		"rad_collector",
+=======
+		"geigercounter",
+>>>>>>> 03cbf3f0e89061e4a31d23d8d0adb1c3048d6231
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
