@@ -125,6 +125,7 @@
 /// Successfully initialized, BUT do not announce it to players (generally to hide game mechanics it would otherwise spoil)
 #define SS_INIT_NO_MESSAGE 4
 
+<<<<<<< HEAD
 //! ### SS initialization load orders
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
@@ -193,6 +194,8 @@
 #define INIT_ORDER_INIT_PROFILER -99 //Near the end, logs the costs of initialize
 #define INIT_ORDER_CHAT -100 //Should be last to ensure chat remains smooth during init.
 
+=======
+>>>>>>> 03cbf3f0e89061e4a31d23d8d0adb1c3048d6231
 // Subsystem fire priority, from lowest to highest priority
 // If the subsystem isn't listed here it's either DEFAULT or PROCESS (if it's a processing subsystem child)
 #define FIRE_PRIORITY_UNPLANNED_NPC 3
@@ -311,6 +314,11 @@
 #define SSMACHINES_APCS_LATE 6
 #define SSMACHINES_MACHINES 7
 #define SSMACHINES_MACHINES_LATE 8
+
+// Weather susbsytem tasks
+#define SSWEATHER_MOBS 1
+#define SSWEATHER_TURFS 2
+#define SSWEATHER_THUNDER 3
 
 // Wardrobe subsystem tasks
 #define SSWARDROBE_STOCK 1
