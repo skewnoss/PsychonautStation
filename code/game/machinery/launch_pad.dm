@@ -75,7 +75,7 @@
 	balloon_alert(user, "saved to buffer")
 	return ITEM_INTERACT_SUCCESS
 
-/obj/machinery/launchpad/attackby(obj/item/weapon, mob/user, params)
+/obj/machinery/launchpad/attackby(obj/item/weapon, mob/user, list/modifiers)
 	if(!stationary)
 		return ..()
 
@@ -312,13 +312,13 @@
 			closed = TRUE
 			update_indicator()
 
-/obj/machinery/launchpad/briefcase/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/launchpad_remote))
-		var/obj/item/launchpad_remote/L = I
-		if(L.pad == WEAKREF(src)) //do not attempt to link when already linked
+/obj/machinery/launchpad/briefcase/attackby(obj/item/item, mob/user, list/modifiers)
+	if(istype(item, /obj/item/launchpad_remote))
+		var/obj/item/launchpad_remote/launch = item
+		if(launch.pad == WEAKREF(src)) //do not attempt to link when already linked
 			return ..()
-		L.pad = WEAKREF(src)
-		to_chat(user, span_notice("You link [src] to [L]."))
+		launch.pad = WEAKREF(src)
+		to_chat(user, span_notice("You link [src] to [launch]."))
 	else
 		return ..()
 
@@ -337,10 +337,8 @@
 	return ..()
 
 /obj/item/storage/briefcase/launchpad/PopulateContents()
-	return list(
-		/obj/item/pen,
-		new /obj/item/launchpad_remote(null, pad),
-	)
+	new /obj/item/pen(src)
+	new /obj/item/launchpad_remote(src, pad)
 
 /obj/item/storage/briefcase/launchpad/attack_self(mob/user)
 	if(!isturf(user.loc)) //no setting up in a locker
