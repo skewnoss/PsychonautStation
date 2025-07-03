@@ -34789,9 +34789,9 @@
 /area/station/commons/vacant_room/office)
 "giC" = (
 /obj/structure/closet/crate/bin,
-/obj/item/stack/spacecash/c1000,
 /obj/structure/sign/poster/official/ian/directional/north,
 /obj/structure/sign/poster/official/love_ian/directional/south,
+/obj/item/stack/spacecash/c1000,
 /turf/open/floor/engine,
 /area/station/maintenance/department/security/upper)
 "giD" = (
